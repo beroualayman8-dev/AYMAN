@@ -1,0 +1,8 @@
+{
+  "name": "نجاح | NAJAH",
+  "description": "المنصة الشاملة لتنظيم ومتابعة دراسة طلبة البكالوريا الجزائرية - نظّم عامك، افهم تقدمك، وقرّب نجاحك.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

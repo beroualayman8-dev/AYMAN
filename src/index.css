@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-arabic: 'IBM Plex Sans Arabic', 'Cairo', sans-serif;
+    color-scheme: dark;
+    --color-deep-navy-bg: #070D1E;
+    --color-deep-navy-surface: #0B1528;
+    --color-deep-navy-card: #0E1A34;
+    --color-deep-navy-hover: #142548;
+    --color-deep-navy-border: #1C2E54;
+  }
+  
+  html {
+    font-family: var(--font-arabic);
+    scroll-behavior: smooth;
+    background-color: #070D1E;
+    color: #F1F5F9;
+  }
+
+  body {
+    overflow-x: hidden;
+    background-color: #070D1E;
+    color: #F1F5F9;
+  }
+}
+
+/* Deep Navy Theme Palette Enforcements (replacing white backgrounds) */
+html.dark body,
+body {
+  background-color: #070D1E !important;
+  color: #F1F5F9 !important;
+}
+
+/* Transform light white cards and plain slate into rich Deep Navy */
+.bg-white,
+.dark .bg-white,
+.dark .bg-slate-900,
+.dark .bg-slate-950,
+.dark .bg-slate-900\/95,
+.dark .bg-slate-900\/90,
+.dark .bg-slate-900\/80 {
+  background-color: #0B1528 !important;
+}
+
+/* Inner containers and chips */
+.bg-slate-50,
+.dark .bg-slate-800,
+.dark .bg-slate-800\/50,
+.dark .bg-slate-800\/60,
+.dark .bg-slate-800\/80 {
+  background-color: #0E1C38 !important;
+}
+
+/* Subtle Navy Borders */
+.border-slate-100,
+.border-slate-200,
+.border-slate-200\/60,
+.border-slate-200\/70,
+.border-slate-200\/80,
+.dark .border-slate-800,
+.dark .border-slate-800\/80,
+.dark .border-slate-700,
+.dark .border-slate-700\/60 {
+  border-color: #1A2E56 !important;
+}
+
+/* Text adjustments for high-contrast readability on Deep Navy */
+.text-slate-900,
+.dark .text-slate-900 {
+  color: #F8FAFC !important;
+}
+
+.text-slate-800,
+.dark .text-slate-800 {
+  color: #E2E8F0 !important;
+}
+
+.text-slate-700,
+.dark .text-slate-700 {
+  color: #CBD5E1 !important;
+}
+
+.text-slate-600,
+.dark .text-slate-600 {
+  color: #94A3B8 !important;
+}
+
+/* Custom Deep Navy scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #070D1E;
+}
+::-webkit-scrollbar-thumb {
+  background: #192C54;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #25427E;
+}
+
+/* Pulse animation for stickers and productivity highlights */
+@keyframes soft-glow {
+  0%, 100% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 1;
+    filter: drop-shadow(0 0 8px rgba(59, 130, 246, 0.4));
+  }
+}
+
+.animate-soft-glow {
+  animation: soft-glow 3s infinite ease-in-out;
+}
+
+
